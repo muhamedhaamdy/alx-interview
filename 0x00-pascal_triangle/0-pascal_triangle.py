@@ -3,6 +3,8 @@
 '''
 this function return 2d list that contains pascal's triangle
 '''
+
+
 def pascal_triangle(n):
     # Initialize each row with the appropriate number of elements
     c = [[0] * (i + 1) for i in range(n)]
