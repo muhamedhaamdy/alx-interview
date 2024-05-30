@@ -9,8 +9,11 @@ def pascal_triangle(n):
     """Create a function def pascal_triangle(n): that returns a list of lists
     of integers representing the Pascal’s triangle of n
     """
+    c = []
+    if n <= 0:
+        return c
     c = [[0] * (i + 1) for i in range(n)]
-    for row in range(5):
+    for row in range(n):
         for col in range(row + 1):
             if not row and not col:
                 c[row][col] = 1
