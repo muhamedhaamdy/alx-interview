@@ -6,7 +6,9 @@ this function return 2d list that contains pascal's triangle
 
 
 def pascal_triangle(n):
-    # Initialize each row with the appropriate number of elements
+    """Create a function def pascal_triangle(n): that returns a list of lists
+    of integers representing the Pascal’s triangle of n
+    """
     c = [[0] * (i + 1) for i in range(n)]
     for row in range(5):
         for col in range(row + 1):
