@@ -17,15 +17,30 @@ Write a method that determines if all the boxes can be opened.
 '''
 
 
+# def realCanUnlockAll(boxes):
+#     unlocked = [0] * len(boxes)
+#     stack = []
+#     unlocked[0] = 1
+#     stack.append(boxes[0])
+#     while len(stack):
+#         box = stack.pop()
+#         for key in box:
+#             if  key < len(boxes) and not unlocked[key]:
+#                 stack.insert(0, boxes[key])
+#                 unlocked[key] = 1
+#     return True if sum(unlocked) == len(boxes) else False
+
+
+
 def canUnlockAll(boxes):
-    unlocked = [0] * len(boxes)
-    stack = []
-    unlocked[0] = 1
-    stack.append(boxes[0])
-    while len(stack):
-        box = stack.pop()
-        for key in box:
-            if not unlocked[key] and key < len(boxes):
-                stack.insert(0, boxes[key])
-                unlocked[key] = 1
-    return True if sum(unlocked) == len(boxes) else False
+    keys = [0]
+    for key in keys:
+        for new_key in boxes[key]:
+            if new_key not in keys and new_key < len(boxes):
+                keys.append(new_key)
+    return len(keys) == len(boxes)
+
+
+
+boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+print(canUnlockAll(boxes))
