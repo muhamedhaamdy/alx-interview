@@ -39,8 +39,3 @@ def canUnlockAll(boxes):
             if new_key not in keys and new_key < len(boxes):
                 keys.append(new_key)
     return len(keys) == len(boxes)
-
-
-
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))
