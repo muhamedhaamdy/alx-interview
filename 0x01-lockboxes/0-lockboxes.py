@@ -14,6 +14,7 @@ Write a method that determines if all the boxes can be opened.
     Return True if all boxes can be opened, else return False
 '''
 
+
 def canUnlockAll(boxes):
     unlocked = [0] * len(boxes)
     stack = []
