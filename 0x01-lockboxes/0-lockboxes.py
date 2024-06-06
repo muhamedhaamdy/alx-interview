@@ -29,13 +29,3 @@ def canUnlockAll(boxes):
                 stack.insert(0, boxes[key])
                 unlocked[key] = 1
     return True if sum(unlocked) == len(boxes) else False
-
-
-boxes = [[1], [2], [3], [4], []]
-print(canUnlockAll(boxes))
-
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))
-
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))
