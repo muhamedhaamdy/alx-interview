@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 '''
-this problem is You have n number of locked boxes in front of you. Each box is numbered sequentially from 0 to n - 1 and each box may contain keys to the other boxes.
+this problem is You have n number of locked boxes in front of you. Each box is
+numbered sequentially from 0 to n - 1 and
+each box may contain keys to the other boxes.
 
 Write a method that determines if all the boxes can be opened.
 
@@ -24,6 +26,16 @@ def canUnlockAll(boxes):
         box = stack.pop()
         for key in box:
             if not unlocked[key] and key < len(boxes):
-                stack.append(boxes[key])
+                stack.insert(0, boxes[key])
                 unlocked[key] = 1
     return True if sum(unlocked) == len(boxes) else False
+
+
+boxes = [[1], [2], [3], [4], []]
+print(canUnlockAll(boxes))
+
+boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
+print(canUnlockAll(boxes))
+
+boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+print(canUnlockAll(boxes))
