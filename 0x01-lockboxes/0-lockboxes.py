@@ -23,7 +23,7 @@ def canUnlockAll(boxes):
     while len(stack):
         box = stack.pop()
         for key in box:
-            if not unlocked[key] and key < len(boxes):
+            if not unlocked[key]:
                 stack.append(boxes[key])
                 unlocked[key] = 1
     return True if sum(unlocked) == len(boxes) else False
