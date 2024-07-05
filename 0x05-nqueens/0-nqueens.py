@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def print_solution(board):
     '''
     Convert the board configuration to a list of queen positions.
@@ -18,6 +19,7 @@ def print_solution(board):
             if board[row][col] == 1:
                 solution.append([row, col])
     return solution
+
 
 def is_safe(board, row, col, N):
     '''
@@ -49,6 +51,7 @@ def is_safe(board, row, col, N):
 
     return True
 
+
 def solve_nqueens_util(board, col, N, solutions):
     '''
     Use backtracking to find all solutions for the N-Queens problem.
@@ -75,6 +78,7 @@ def solve_nqueens_util(board, col, N, solutions):
 
     return res
 
+
 def solve_nqueens(N):
     '''
     Solve the N-Queens problem and print all solutions.
@@ -92,9 +96,11 @@ def solve_nqueens(N):
     for solution in solutions:
         print(solution)
 
+
 if __name__ == "__main__":
     '''
-    The main function to handle command-line arguments and initiate the solving process.
+    The main function to handle command-line
+    arguments and initiate the solving process.
     '''
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
