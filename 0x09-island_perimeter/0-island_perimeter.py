@@ -6,7 +6,8 @@ def island_perimeter(grid):
     """
     Calculates the perimeter of the island in the given grid.
 
-    :param grid: List of List of integers, where 0 represents water and 1 represents land
+    :param grid: List of List of integers,
+    where 0 represents water and 1 represents land
     :return: Integer representing the perimeter of the island
     """
     if not grid or not grid[0]:
